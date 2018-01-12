@@ -248,7 +248,7 @@ class Selective extends InOperator {
      */
     protected function getEntityTypeOptions() {
         $entity_types = \Drupal::entityTypeManager()->getDefinitions();
-        $options = [];
+        $options = ['' => '- None -'];
 
         /**
          * @var string $entity_type_id
