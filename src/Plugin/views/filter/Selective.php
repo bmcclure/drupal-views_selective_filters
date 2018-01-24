@@ -329,7 +329,7 @@ class Selective extends InOperator {
         // that this view is being used to obtain selective data.
         $view_copy->selective_oids = TRUE;
         // Store information about what filter is this view being used for.
-        $view_copy->selective_handler_signature = $signature;
+        $view_copy->selective_handler_signature = $this->getSignature();
         // Transfer contextual information to cloned view.
         $view_copy->setExposedInput($this->view->getExposedInput());
         $view_copy->setArguments($this->view->args);
