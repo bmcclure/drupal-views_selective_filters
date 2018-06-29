@@ -457,10 +457,12 @@ class Selective extends InOperator {
                     $value = NULL;
 
                     if (NULL !== $entityTypeStorage) {
-                        $entity = $entityTypeStorage->load($key);
+                        if ($key) {
+                            $entity = $entityTypeStorage->load($key);
 
-                        if ($entity) {
-                            $value = $entity->label();
+                            if ($entity) {
+                                $value = $entity->label();
+                            }
                         }
                     }
                     else {
