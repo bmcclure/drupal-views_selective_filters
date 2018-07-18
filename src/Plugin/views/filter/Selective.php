@@ -456,7 +456,7 @@ class Selective extends InOperator {
                 foreach ((array) $keys as $key) {
                     $value = NULL;
 
-                    if (NULL !== $entityTypeStorage) {
+                    if (NULL !== $entityTypeStorage && $key) {
                         $entity = $entityTypeStorage->load($key);
 
                         if ($entity) {
